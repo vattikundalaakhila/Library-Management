@@ -1,0 +1,72 @@
+
+  
+  body {
+  background-color: #f4f6fb;  /* very light bluish gray */
+  color: #1f2933;
+}
+
+header{
+    background-color: rgb(134, 134, 223);
+ 
+}
+.heading{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+    
+}
+.buttons button{
+    background-color: #ffffff;
+  color: #2f3a8f;        
+  border: 1px solid #2f3a8f;
+    width: max-content;
+    height: 30px;
+    border-radius: 8px;
+
+}
+.buttons button:hover{
+    background-color: #e6e9ff;
+}
+ /* #login_modal{
+    display: flex;
+    flex-direction: column;
+    align-items: space-around;
+    justify-content: center;
+    gap: 10px;  
+} */
+ #login_modal {
+  background-color: #ffffff;
+  color: #1f2933;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  border: none;
+}
+
+
+#close_modal {
+  background-color: #e5e7eb;
+  color: #1f2933;
+  border-radius: 4px;
+  
+}
+
+#close_modal:hover {
+  background-color: #d1d5db;
+}
+
+#submit_btn {
+  background-color: #2f3a8f;
+  color: white;
+  border-radius: 4px;
+}
+
+#submit_btn:hover {
+  background-color: #1f2a6d;
+}
