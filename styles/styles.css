@@ -5,23 +5,25 @@
   color: #1f2933;
 }
 
-header{
+.main_header{
     background-color: rgb(134, 134, 223);
+    height: 100px;
  
 }
-.heading{
+.main_header{
     display: flex;
     justify-content: center;
+    align-items: center;
     color: white;
 }
-.buttons{
+.header_buttons{
     display: flex;
     justify-content: flex-end;
     gap: 20px;
     padding: 10px;
     
 }
-.buttons button{
+.header_buttons button{
     background-color: #ffffff;
   color: #2f3a8f;        
   border: 1px solid #2f3a8f;
@@ -30,30 +32,21 @@ header{
     border-radius: 8px;
 
 }
-.buttons button:hover{
+.header_buttons button:hover{
     background-color: #e6e9ff;
 }
- /* #login_modal{
+ 
+
+.close_modal_container{
     display: flex;
-    flex-direction: column;
-    align-items: space-around;
-    justify-content: center;
-    gap: 10px;  
-} */
- #login_modal {
-  background-color: #ffffff;
-  color: #1f2933;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  border: none;
+    justify-content: flex-end;
 }
-
-
 #close_modal {
   background-color: #e5e7eb;
   color: #1f2933;
   border-radius: 4px;
+  border: 1px solid blue;
+  width: max-content;
   
 }
 
@@ -65,6 +58,14 @@ header{
   background-color: #2f3a8f;
   color: white;
   border-radius: 4px;
+  width: 80px;
+  height: 25px;
+  border: 1px solid blue;
+}
+.submit_container{
+    display: flex;
+    justify-content: center;
+    
 }
 
 #submit_btn:hover {

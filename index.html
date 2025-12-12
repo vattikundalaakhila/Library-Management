@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,48 +8,61 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Library Project</title>
 </head>
+
 <body>
-    <header> 
-        <div class="heading">
+    <header>
+        <div class="main_header">
             <h1>My Library</h1>
-        </div>
-    
-    <nav class="buttons">
-        <button id="login_btn">Login</button>
-        <button id="add_book_btn"> Add Books</button>
-
-    </nav>
-</header>
-
-    <main></main>
-    <footer></footer>
-    <dialog id="login_modal">
-        <div>
-            <button id="close_modal">X</button>
-            <form action="" id="login_form">
-                <div>
-                    <label for="username">User-Name</label>
-                    <input type="text" placeholder="username">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" placeholder="password">
-                </div>
-                <button id="submit_btn" type="submit"> Submit</button>
-
-            </form>
-        </div>
         
 
+        <nav class="header_buttons">
+            <button id="add_book_btn"> Add Books</button>
+        </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <section id="root">
+            <p>No books added, Please Add some Books.</p>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <dialog id="add_book_modal">
+        <h2>Add Book</h2>
+
+        <span id="close_modal">X</span>
+        <form id="add_book_form">
+            <div>
+                <label for="book_title">Book Title*</label>
+                <input type="text" name="book_title" id="book_title" required>
+            </div>
+             <div>
+                <label for="book_author">Book Author*</label>
+                <input type="text" name="book_author" id="book_author" required>
+            </div>
+             <div>
+                <label for="book_genre">Genre*</label>
+                <select title="Book Genre" name="book_genre" id="book_genre" required></select>
+            </div>
+             <div>
+                <label for="book_reading_status">Reading Status*</label>
+                <select title="Book Reading Status" name="book_reding_status" id="book_reading_status" ></select>
+            </div>
+            <button id="submit_btn" type="submit"></button>   
+        </form>
     </dialog>
-  
+   <template id="book_template">
+
+   </template>
 
     <script src="./javascript/app.js">
 
 
     </script>
-    <script src="./javascript/loginForm.js">
 
-    </script>
 </body>
+
 </html>
