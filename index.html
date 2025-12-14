@@ -11,29 +11,37 @@
 
 <body>
     <header>
+        <div class="header_container">
         <div class="main_header">
             <h1>My Library</h1>
-        
+        </div>
 
         <nav class="header_buttons">
             <button id="add_book_btn"> Add Books</button>
         </nav>
+        
         </div>
 
     </header>
 
     <main>
         <section id="root">
-            <p>No books added, Please Add some Books.</p>
+            <p>No Books Added, Please Add Some Books.</p>
         </section>
     </main>
 
     <footer></footer>
 
+
     <dialog id="add_book_modal">
+        <div class="dialog_content">
+
         <h2>Add Book</h2>
 
+        <div class="close_modal_container">
         <span id="close_modal">X</span>
+        </div>
+
         <form id="add_book_form">
             <div>
                 <label for="book_title">Book Title*</label>
@@ -49,19 +57,44 @@
             </div>
              <div>
                 <label for="book_reading_status">Reading Status*</label>
-                <select title="Book Reading Status" name="book_reding_status" id="book_reading_status" ></select>
-            </div>
-            <button id="submit_btn" type="submit"></button>   
-        </form>
-    </dialog>
-   <template id="book_template">
+                <select title="Book Reading Status" name="book_reding_status" id="book_reading_status" >
+                    <option value="">Select Reading Status</option>
+                    <option value="not_started">Not Yet Started</option>
+                    <option value="reading">Reading</option>
+                    <option value="completed">Completed</option>
+                </select>
 
+            </div> 
+            <div class="submit_container">
+            <button id="submit_btn" type="submit">Submit</button>   
+            </div>
+        </form>
+        </div>
+    </dialog>
+
+   <template id="book_template">
+<div class="book">
+    <h2 class="book_title"> </h2>
+    <h3 class="book_author"> </h3>
+    <span class="book_genre"></span>
+
+    <select name="" id="book_reading_status">
+        <!-- option from the javascript -->
+         <option value="not_started">Not yet started</option>
+         <option value="reading">Reading</option>
+         <option value="completed">completed</option>
+    </select>
+
+    <button id="delete_book">Delete Book</button>
+
+
+</div>
    </template>
 
-    <script src="./javascript/app.js">
-
+    <script src="./javascript/app.js" type="module">
 
     </script>
+    <script src="./javascript/add_form.js" type="module"></script>
 
 </body>
 

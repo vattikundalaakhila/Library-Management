@@ -1,62 +1,25 @@
+// import add_book_form_func from "./add_form.js";
+import add_genre from "./adding_options_genre.js";
+import { renderBook } from "./render_book.js";
 
-    //get the button which trigger add book action
-    const add_book_btn= document.getElementById("add_book_btn")
+add_genre();
 
-    //adding event listener to "Add Books" button
-    add_book_btn.addEventListener("click", add_book_func)
+const add_book_btn= document.getElementById("add_book_btn")
 
+//to open modal 
+const add_book_modal = document.getElementById("add_book_modal")
 
-    //declaring the add_book_func
-    function add_book_func(event){ 
+//when Add books button is clicked the modal will appear
+add_book_btn.addEventListener("click",()=> add_book_modal.showModal());
 
-        //checking if user has loggedIn item in localStorage
-        if(!localStorage.getItem("loggedIn")){
-            //if not then alert the user to login by showing login modal
-            alert("please login to add books!");
-            login_modal.showModal();
-        }
+//to close modal
+const close_modal = document.getElementById("close_modal")
+close_modal.addEventListener("click", ()=> add_book_modal.close());
 
-        //if user is loggedIn then to add books logic will come here
+// add book function
+const book_list =
+  JSON.parse(localStorage.getItem("book_list")) || [];
+// add_book_form_func(book_list);
 
-
-    }
-
-    //getting the login button element
-    const login_btn = document.getElementById("login_btn");
-
-    //getting login modal element from dialog element
-    const login_modal = document.getElementById("login_modal");
-
-    //getting close modal button from dialog element
-    const close_modal= document.getElementById("close_modal");
-
-
-    //Adding event listener to the X button inside the login modal
-    //if X button is clicked then the login_modal will get closed
-    close_modal.addEventListener('click', ()=> login_modal.close())
-
-    //to check if user  has loggedIn item in localStorage
-     if(localStorage.getItem("loggedIn")){
-
-    // //if loggedIn item exists then Log In will become Log out.
-     login_btn.innerText = "Log out"
-     }
-
-    //login or logout button listener
-    login_btn.addEventListener('click', ()=> {
-
-        //if login button says Login then we display the login modal 
-        if(login_btn.innerText==='Login'){
-            login_modal.showModal();
-        }
-
-        else{
-    //if button says not Login (Log out) then we remove the loggedIn item from localStorage
-            localStorage.removeItem("loggedIn")
-
-            //after removing from localStorage we want login button again.
-            login_btn.innerText= "Login"
-        }
-    })
-
-
+// render books
+renderBook(book_list);
