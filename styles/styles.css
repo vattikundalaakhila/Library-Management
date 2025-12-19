@@ -36,6 +36,7 @@ main{
     justify-content: center;
     align-items: center; */
     color: white;
+    font-size: 1.4rem;
 } 
 .header_buttons{
     display: flex;
@@ -51,6 +52,7 @@ main{
     width: 90px;
     height: 32px;
     border-radius: 8px;
+    font-size: 1rem;
 
 }
 .header_buttons button:hover{
@@ -64,7 +66,7 @@ main{
   justify-content: center;
   align-items: center;
   padding-top: 30px;    
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 400;
   color: #626d81;
 }
@@ -95,6 +97,7 @@ dialog::backdrop {
 .dialog_content h2 {
   /* color: #2f3a8f; */
     color: #1f2a6d; 
+    font-size: 26px;
 }
 
  #add_book_form > div:not(.submit_container) {
@@ -108,7 +111,7 @@ dialog::backdrop {
   font-weight: 600;
   /* color: #2f3a8f; */
     color: #4b56a6; 
-  font-size: 14px;
+  font-size: 16px;
 }
 
 #add_book_form input,
@@ -136,9 +139,10 @@ dialog::backdrop {
 #close_modal {
   background-color: rgb(245, 48, 48);
   color: white;
+  font-size: 18px;
   border-radius: 50px;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   text-align: center;
   cursor: pointer;
 
@@ -158,6 +162,7 @@ dialog::backdrop {
   width: 80px;
   height: 25px;
   border: 1px solid blue;
+  font-size: 16px;
 }
 .submit_container{
     display: flex;
@@ -169,6 +174,13 @@ dialog::backdrop {
 #submit_btn:hover {
   background-color: #1f2a6d;
   transform: scale(1.09);
+}
+
+
+#root{
+  display: flex;
+  /* justify-content: space-evenly; */
+  gap: 2em;
 }
 .book {
   display: flex;
@@ -184,6 +196,7 @@ dialog::backdrop {
   width: 90px;
   height: 20px;
   border-radius: 5px;
+  font-size: 15px;
 }
 
  #delete_book:hover {
@@ -195,4 +208,58 @@ dialog::backdrop {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.book {
+   
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+.book_title {
+    font-family: var(--font-halloween);
+    color: var(--color-sunset-gold);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.book_author {
+    font-size: 1.1rem;
+    color: var(--color-light-text);
+    margin-bottom: 0.75rem;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.book_genre {
+    display: inline-block;
+    background-color: var(--color-dark-red);
+    padding: 0.2rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+
+/* Status Select Field */
+.book select {
+    background-color: rgb(210, 210, 233);
+    color: black;
+    border: 1px solid var(--color-burnt-orange);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    cursor: pointer;
 }

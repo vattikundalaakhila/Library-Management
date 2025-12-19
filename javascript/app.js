@@ -1,6 +1,7 @@
-// import add_book_form_func from "./add_form.js";
+import add_book_form_func from "./add_form.js";
 import add_genre from "./adding_options_genre.js";
 import { renderBook } from "./render_book.js";
+
 
 add_genre();
 
